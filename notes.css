@@ -1,0 +1,52 @@
+.title{
+    font-family: ariel;
+    background: gray;
+    line-height: 1.5;
+    text-align: center;
+}
+.image{
+    float: left;
+    width: 150px;
+    length: 150px;
+}
+.description{
+    padding-left: 200px;
+    padding-top: 1px;
+}
+
+
+.title2{
+    margin-top: 100px;
+    background: gray;
+    line-height: 1.5;
+    text-align: center;
+}
+.title3{
+    margin-top: 100px;
+    background: gray;
+    line-height: 1.5;
+    text-align: center;
+}
+.title4{
+    margin-top: 100px;
+    background: gray;
+    line-height: 1.5;
+    text-align: center;
+}
+.title5{
+    margin-top: 100px;
+    background: gray;
+    line-height: 1.5;
+    text-align: center;
+}
+.body{
+    height: auto;
+    width: auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
