@@ -7,7 +7,6 @@
 .image{
     float: left;
     width: 150px;
-    length: 150px;
 }
 .description{
     padding-left: 200px;
@@ -42,11 +41,4 @@
 .body{
     height: auto;
     width: auto;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
 }
