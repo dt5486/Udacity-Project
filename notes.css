@@ -1,7 +1,8 @@
 .title{
     font-family: ariel;
     background: gray;
-    line-height: 1.5;
+    line-height: 2;
+    font-variant: small-caps;
     text-align: center;
 }
 .image{
@@ -13,30 +14,15 @@
     padding-top: 1px;
 }
 
-
-.title2{
-    margin-top: 100px;
-    background: gray;
-    line-height: 1.5;
+.title1{
+    background: grey;
     text-align: center;
 }
-.title3{
+.notes{
     margin-top: 100px;
-    background: gray;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
 }
-.title4{
-    margin-top: 100px;
-    background: gray;
-    line-height: 1.5;
-    text-align: center;
-}
-.title5{
-    margin-top: 100px;
-    background: gray;
-    line-height: 1.5;
-    text-align: center;
 }
 .body{
     height: auto;
