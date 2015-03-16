@@ -9,14 +9,17 @@
     float: left;
     width: 150px;
 }
-.description{
+.image_description{
     padding-left: 200px;
     padding-top: 1px;
+}
+.description{
+    text-align: left;
 }
 
 .title1{
     background: grey;
-    text-align: center;
+    text-align: left;
 }
 .notes{
     margin-top: 100px;
