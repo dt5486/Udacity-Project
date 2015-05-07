@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="notes.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/notes.css">
 	<title>Building a Web Page Notes</title>
 </head>
 <body>
 	<h1 class="title">What a Web Page is</h1>
-		<div class="image"><img src="Images/www.png" alt="picture"></div>
+		<div class="image"><img src="images/www.png" alt="picture"></div>
 		<div class="image_description"><p>A web page is a text document written in a language called
 		HTML.  Web browsers read these documents, and then interpret and display them.</p>
 		</div>
@@ -177,6 +177,52 @@
 			are defined as functions (and some other constructs like classes and modules)  A function essentially names a set of single statements, so a function essentially is an abstraction.</p>
 			</div>
 	</div>
+	<div class="notes">
+		<h2 class="title1">Introduction to Networks</h2>
+			<div class="description"><p>The internet is what's called a <b>"NETWORK"</b><br>A <b>NETWORK</b> is a group of entities that can communicate, even though they are not all directly connected.
+			<br>Terms used in reference to this are:<br>Latency - Which is time it takes a message to get from source to destination.<br><span style="COLOR: green">milliseconds</span><br>Bandwidth - Which is the amount
+			of info that can be transmitted per unit time.<br><span style="COLOR: green">bit per second</span><br>Bit - Which is the smallest unit of information.<br>Protocol - Which uses a set of rules to send and receive
+			messages at the Internet address level.<br><b>HTTPS</b> which means <b>Hyper Text Transfer Protocol Secure</b> is a type of protocol ex: https://www.google.com<br>Messages between a client(like a web browser)
+			and a Server(like google.com).  The client does a <b>GET</b> to the server and it <b>RESPONDS</b> with the content.  Thier are two types of servers <b>Static</b> which is a pre-written file image and <b>Dynamic
+			</b> which is made on the fly (web applications)</p>
+			</div>
+	</div>
+	<div class="notes">
+		<h2 class="title1">Things We Need for Making a Network</h2>
+			<div class="description"><p>1. convert messages<br>-way to encode and interpret messages<br><span style="COLOR: green">Internet: message -> bits -> electrons/photons</span><br>2. routing<br>-way to route messages<br>
+			<span style="COLOR: green">Internet: router figure out next hops</span><br>3. which direction<br>4. decide who gets to use the network and what is sent<br>-rules for deciding who gets to use resources<br>
+			<span style="COLOR: green">Internet: best effort service</span></p>
+			</div>
+	</div>
+	<div class="notes">
+		<h2 class="title1">Forms</h2>
+			<div class="description"><p>n a database context, a form is a window or screen that contains numerous fields, or spaces to enter data. Each field holds a field label so that any user who views the form gets an idea of
+			its contents. A form is more user friendly than generating queries to create tables and insert data into fields.  You can use <b>Strings, List or Dictionary</b>.</p></div>
+	</div>
+	<div class="notes">
+		<h2 class="title1">Validation</h2>
+			<div class="description"><p>A server can recieve junk.  This can cause damage to a wesite if the appropriate actions are taken.  By verifying the users input this can ensure valid input is given.  String substitution
+			can be used so that information that is submitted will not corrupt any data.</p></div>
+	</div>
+	<div class="notes">
+		<h2 class="title1">GET vs POST</h2>
+			<div class="description"><p>The POST request method is designed to request that a web server accepts the data enclosed in the request message's body for storage. It is often used when uploading a file or submitting a
+			completed web form. In contrast, the HTTP GET request method is designed to retrieve information from the server.<br><b>GET</b><br>-parameters in URL<br>-used for fetching documents<br>-max URL length<br>-ok to cache
+			<br><br><b>POST</b><br>-parameters in body<br>-used for updating data<br>-no max lenght<br>-not ok to cache<br>-ok to change the server</p></div>
+	</div>
+	<div class="notes">
+		<h2 class="title1">Templates</h2>
+			<div class="description"><p>A template library is a library to build complicated strings(html)<br>jinja2 (built into Google App Engine)<br>You can read about it at <a href= "http://jinja.pocoo.org/">jinja.pocoo.org</a></p></div>
+	</div>
+	<div class="notes">
+		<h2 class="title1">Databases</h2>
+			<div class="description"><p>A database is a program that stores and retrieves large amounts of structured data.<br>Why databases?<br>The downside of querying data by hand is:<br>- error prone<br>-tedious<br>-slow<br><br>
+			<b>Types of Databases:</b><br>mySGL<br>SQLite<br>Oracle<br>Google App Engine's Database<br><br>What is SQL?<br>Its meaning is Structured Query Language it was invented in the 70s.  It is the set of instructions used to interact
+			with a relational database.  <b>ACID</b> (Atomicity, Consistency, Isolation, Durability) is a set of properties that guarantee that database transactions are processed reliably. In the context of databases, a single logical operation on
+			the data is called a transaction.  </p></div>
+	</div>
+	{% block content %}
+	{% endblock %}
 
 </body>
     
