@@ -4,12 +4,9 @@ import os
 import jinja2
 import webapp2
 
-from google.appengine.ext import db
+from google.appengine.ext import ndb
 
-jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),autoescape = True)
-
-class Comment(db.Model):
-    content = db.StringProperty(multiline=True)
+jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),autoescape = False)
 
 
 class Handler(webapp2.RequestHandler):
@@ -25,14 +22,21 @@ class Handler(webapp2.RequestHandler):
 
 class MainPage(Handler):
     def get(self):
-        items = self.request.get_all("words")
-        if items and not items[0]:
-            del items[0]
+        items = Comments.query().fetch()
         self.render("notes.html", items = items)
         
     def post(self):
-        self.comment = Comment(content=self.request.get('words'))
+        items = self.request.get("words")
+        if not items:
+            self.response.out.write('<b>Error!!  You must Add some notes.</b>')
+        else:
+            words = Comments(words=items)
+            words.put()  
+        items = Comments.query().fetch()
+        self.render("notes.html", items = items)
         
+class Comments(ndb.Model):
+    words = ndb.StringProperty(required=True)
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
